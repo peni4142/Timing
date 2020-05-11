@@ -2,12 +2,10 @@ import { IChart } from "../Interfaces/IChart";
 
 
 
-
-// todo: adding identifier 
 export class ApiCallConfiguration {
     public get ApiUri(): string { return this.constructApiUrl(); }
 
-    constructor(public Id: number, private chart: IChart, private variables: { [key: string]: string }) {
+    constructor(public Id: number, public Name: string, private chart: IChart, private variables: { [key: string]: string }) {
         if (chart == null) {
             throw new Error("The chart can't be null");
         }

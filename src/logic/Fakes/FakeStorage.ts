@@ -42,7 +42,7 @@ export class FakeStorage implements IStorage {
     }
 
     GetStoredApiCallConfiguration(id: number): ApiCallConfiguration {
-        return new ApiCallConfiguration(id, this.exampleChart, { Variable1: "Value1", Variable2: "Value2" });
+        return new ApiCallConfiguration(id, "Name " + id, this.exampleChart, { Variable1: "Value1", Variable2: "Value2" });
     }
 
     StoreApiConfiguration(apiCallConfiguration: ApiCallConfiguration): void { /*Fake*/ }
